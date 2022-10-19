@@ -1,5 +1,7 @@
 import { ReactNode, useEffect, useMemo, useState } from 'react';
+import { IAppContext } from '../interfaces/IAppContext';
 import { IInitialState } from '../interfaces/IInitialState';
+import { readTheme } from '../services/localStorage/theme';
 import fetchAllPokemons from '../services/pokeApi';
 import AppContext from './AppContext';
 
@@ -9,20 +11,21 @@ interface IProps {
 
 const INITIAL_STATE: IInitialState = {
   pokemons: [],
+  theme: readTheme() ? readTheme() : 'light',
 };
 
 function AppProvider({ children }: IProps) {
   const [state, setState] = useState(INITIAL_STATE);
-  const value = useMemo(
+  const value: IAppContext = useMemo(
     () => ({ ...state, state, setState }),
     [state, setState]
   );
 
   useEffect(() => {
     fetchAllPokemons().then((pokemons) => {
-      setState({ ...state, pokemons });
+      setState((prevState) => ({ ...prevState, pokemons }));
     });
-  }, [state]);
+  }, [state.pokemons]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
