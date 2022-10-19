@@ -1,5 +1,6 @@
-import { ReactNode, useMemo, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
 import { IInitialState } from '../interfaces/IInitialState';
+import fetchAllPokemons from '../services/pokeApi';
 import AppContext from './AppContext';
 
 interface IProps {
@@ -12,7 +13,16 @@ const INITIAL_STATE: IInitialState = {
 
 function AppProvider({ children }: IProps) {
   const [state, setState] = useState(INITIAL_STATE);
-  const value = useMemo(() => ({ ...state, setState }), [state, setState]);
+  const value = useMemo(
+    () => ({ ...state, state, setState }),
+    [state, setState]
+  );
+
+  useEffect(() => {
+    fetchAllPokemons().then((pokemons) => {
+      setState({ ...state, pokemons });
+    });
+  }, [state]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
