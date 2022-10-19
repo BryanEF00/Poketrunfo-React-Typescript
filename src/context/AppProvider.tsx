@@ -25,7 +25,7 @@ function AppProvider({ children }: IProps) {
     fetchAllPokemons().then((pokemons) => {
       setState((prevState) => ({ ...prevState, pokemons }));
     });
-  }, [state.pokemons]);
+  }, []);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
