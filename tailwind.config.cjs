@@ -2,6 +2,12 @@
 module.exports = {
   darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  safelist: [
+    {
+      pattern:
+        /(bg|text|border)-(normal|fighting|flying|poison|ground|rock|bug|ghost|steel|fire|water|grass|electric|psychic|ice|dragon|dark|fairy)/,
+    },
+  ],
   theme: {
     extend: {
       colors: {
