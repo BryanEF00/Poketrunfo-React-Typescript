@@ -8,10 +8,13 @@ const fetchOnePokemon = async (url: string): Promise<IPokemon> => {
   const { id, name, sprites, stats, types } = response;
 
   const {
+    front_default: simple,
     other: {
-      home: { front_default: sprite },
+      home: { front_default: detailed },
     },
   } = sprites;
+
+  const sprite = { simple, detailed };
 
   return { id, name, sprite, stats: getStats(stats), types: getTypes(types) };
 };

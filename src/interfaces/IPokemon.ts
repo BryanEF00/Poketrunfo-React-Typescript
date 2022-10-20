@@ -6,7 +6,10 @@ export interface IStatus {
 export interface IPokemon {
   id: number;
   name: string;
-  sprite: string;
+  sprite: {
+    simple: string;
+    detailed: string;
+  };
   stats: IStatus[];
   types: string[];
 }

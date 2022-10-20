@@ -13,11 +13,11 @@ function ThemeSwitcher() {
   };
 
   return (
-    <button className="h-full px-5" type="button" onClick={handleThemeSwitch}>
+    <button className="" type="button" onClick={handleThemeSwitch}>
       {theme === 'light' ? (
-        <MdLightMode size={30} className="text-yellow-400" />
+        <MdLightMode size={32} className="text-yellow-400" />
       ) : (
-        <MdDarkMode size={30} className="text-white" />
+        <MdDarkMode size={32} className="text-white" />
       )}
     </button>
   );

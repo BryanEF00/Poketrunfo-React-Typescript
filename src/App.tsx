@@ -6,7 +6,7 @@ function App() {
   const { theme } = useContext(AppContext);
 
   return (
-    <div className={`${theme} `}>
+    <div className={`${theme}`}>
       <AppRouter />
     </div>
   );

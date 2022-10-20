@@ -1,7 +1,22 @@
 import { Link, Outlet } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { useState } from 'react';
 import ThemeSwitcher from './ThemeSwitcher';
 
 function Navmenu() {
+  const [openMenu, setOpenMenu] = useState('initialRender');
+
+  const handleOpenMenu = () => {
+    if (openMenu === 'initialRender') {
+      return 'hidden';
+    }
+
+    const checkState =
+      openMenu === 'true' ? 'animate-slideDown' : 'animate-slideUp';
+
+    return checkState;
+  };
+
   const links = [
     { url: '/deck', name: 'Deck' },
     { url: '/collection', name: 'Collection' },
@@ -9,38 +24,47 @@ function Navmenu() {
   ];
 
   return (
-    <div className="bg-white text-black dark:bg-neutral-900 dark:text-white w-full min-h-screen flex justify-center items-start transition-all duration-100">
-      <nav className="w-full h-16 fixed top-0 flex justify-center border-b-2">
-        <div className="w-full max-w-screen-lg  flex items-center justify-between">
-          <div className="h-full">
-            <Link
-              className="h-full w-28 flex items-center justify-center px-5
-              transition-colors
-              hover:bg-slate-200
-              dark:hover:bg-neutral-800"
-              to="/"
-            >
-              Home
-            </Link>
+    <div
+      className="w-full min-h-screen flex flex-col bg-white text-black dark:bg-neutral-900 dark:text-white
+        sm:max-w-md sm: mx-auto"
+    >
+      <nav className="w-full flex border-b-2 mx-auto">
+        <div className="w-full flex items-center justify-between">
+          <div className="py-5 px-8">
+            <Link to="/">Home</Link>
           </div>
-          <div className="h-full flex items-center gap-1">
+          <div
+            className={`${handleOpenMenu()} w-full h-screen fixed top-0 flex flex-col items-center justify-start pt-20 gap-5 bg-white text-black dark:bg-neutral-900 dark:text-white z-50
+            sm:max-w-md sm: mx-auto
+            `}
+          >
+            <div className="absolute w-full flex items-center justify-between top-0 p-8">
+              <ThemeSwitcher />
+              <button type="button" onClick={() => setOpenMenu('false')}>
+                <FaTimes size={28} className="text-red-500" />
+              </button>
+            </div>
             {links.map((link) => (
               <Link
-                className="h-full w-28 flex items-center justify-center px-5
-                transition-colors
-                hover:bg-slate-200
-                dark:hover:bg-neutral-800"
+                className="w-full border-b-2 px-2 pt-5 pb-2 uppercase"
                 key={link.name}
                 to={link.url}
+                onClick={() => setOpenMenu('false')}
               >
                 {link.name}
               </Link>
             ))}
           </div>
-          <ThemeSwitcher />
+          <button
+            className="py-5 px-8"
+            type="button"
+            onClick={() => setOpenMenu('true')}
+          >
+            <FaBars size={28} />
+          </button>
         </div>
       </nav>
-      <section className="transition-all duration-100 mt-16">
+      <section className="w-full mx-auto">
         <Outlet />
       </section>
     </div>
