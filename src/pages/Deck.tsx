@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import Filter from '../components/Filter';
 import PokemonSimpleCard from '../components/PokemonSimpleCard';
 import AppContext from '../context/AppContext';
 
@@ -7,7 +8,7 @@ function Deck() {
 
   return (
     <div className="">
-      <div>Filter</div>
+      <Filter />
       <div className="border-t-2 py-2">
         <div className="flex flex-wrap items-center justify-evenly">
           {pokemons.map((pokemon) => (
