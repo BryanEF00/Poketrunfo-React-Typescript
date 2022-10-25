@@ -7,7 +7,7 @@ function Deck() {
   const { filteredPokemons } = useContext(AppContext);
 
   return (
-    <div className="">
+    <div className="w-full">
       <Filter />
       <div className="border-t-2 py-2">
         <div className="flex flex-wrap items-center justify-evenly">
