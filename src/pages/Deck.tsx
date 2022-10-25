@@ -4,14 +4,14 @@ import PokemonSimpleCard from '../components/PokemonSimpleCard';
 import AppContext from '../context/AppContext';
 
 function Deck() {
-  const { pokemons } = useContext(AppContext);
+  const { filteredPokemons } = useContext(AppContext);
 
   return (
     <div className="">
       <Filter />
       <div className="border-t-2 py-2">
         <div className="flex flex-wrap items-center justify-evenly">
-          {pokemons.map((pokemon) => (
+          {filteredPokemons.map((pokemon) => (
             <div
               className="w-[45%] flex flex-col items-center"
               key={pokemon.id}

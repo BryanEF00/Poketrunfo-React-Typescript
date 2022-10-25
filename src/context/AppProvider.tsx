@@ -11,6 +11,7 @@ interface IProps {
 
 const INITIAL_STATE: IInitialState = {
   pokemons: [],
+  filteredPokemons: [],
   theme: readTheme() ? readTheme() : 'light',
 };
 
@@ -23,7 +24,11 @@ function AppProvider({ children }: IProps) {
 
   useEffect(() => {
     fetchAllPokemons().then((pokemons) => {
-      setState((prevState) => ({ ...prevState, pokemons }));
+      setState((prevState) => ({
+        ...prevState,
+        pokemons,
+        filteredPokemons: pokemons,
+      }));
     });
   }, []);
 

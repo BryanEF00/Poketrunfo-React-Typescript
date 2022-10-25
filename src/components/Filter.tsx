@@ -1,16 +1,47 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import AppContext from '../context/AppContext';
+import filterByName from '../helpers/filter/filterByName';
+import filterByNumber from '../helpers/filter/filterByNumber';
+
+interface IInput {
+  name: string;
+  number: number | null;
+}
+
+const DEFAULT_INPUT = { name: '', number: null };
 
 function Filter() {
+  const { state, setState, pokemons } = useContext(AppContext);
   const [filter, setFilter] = useState('initialRender');
-  const [input, setInput] = useState({ name: '', number: 0 });
+  const [input, setInput] = useState<IInput>(DEFAULT_INPUT);
 
-  const handleFilter = () => {
-    setInput({ name: '', number: 0 });
+  const handleFilterType = () => {
+    setState({ ...state, filteredPokemons: pokemons });
+    setInput(DEFAULT_INPUT);
 
     return filter === 'Number' ? setFilter('Name') : setFilter('Number');
   };
 
-  const handleSlider = () => {
+  const handleSearch = (value: string) => {
+    if (filter === 'Number') {
+      setState({
+        ...state,
+        filteredPokemons: filterByNumber(pokemons, Number(value)),
+      });
+
+      return setInput({ ...input, number: Number(value) });
+    }
+
+    setState({
+      ...state,
+      filteredPokemons: filterByName(pokemons, value),
+    });
+
+    return setInput({ ...input, name: value });
+  };
+
+  // Set CSS Animation
+  const handleSliderAnimation = () => {
     if (filter === 'initialRender') {
       return '';
     }
@@ -19,13 +50,6 @@ function Filter() {
       filter === 'Number' ? 'animate-slideRight' : 'animate-slideLeft';
 
     return checkState;
-  };
-
-  const handleSearch = (value: string) => {
-    if (filter === 'Number')
-      return setInput({ ...input, number: Number(value) });
-
-    return setInput({ ...input, name: value });
   };
 
   return (
@@ -37,10 +61,10 @@ function Filter() {
           <button
             className="flex items-center  w-12 h-3 rounded-full bg-gray-100 gap-5 dark:bg-neutral-800"
             type="button"
-            onClick={handleFilter}
+            onClick={handleFilterType}
           >
             <div
-              className={`${handleSlider()} bg-white w-5 h-5 rounded-full border`}
+              className={`${handleSliderAnimation()} bg-white w-5 h-5 rounded-full border`}
             />
           </button>
         </div>
@@ -49,9 +73,8 @@ function Filter() {
         className="w-full flex justify-center text-black rounded-md p-1 px-2 border"
         type={filter === 'Number' ? 'number' : 'text'}
         placeholder="Search Pokémon"
-        value={filter === 'Number' ? input.number : input.name}
+        value={input.number && filter === 'Number' ? input.number : input.name}
         onChange={({ target: { value } }) => handleSearch(value)}
-        min="1"
       />
     </div>
   );
