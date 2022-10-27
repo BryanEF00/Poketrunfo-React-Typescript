@@ -1,0 +1,121 @@
+<svg width="460" height="800" viewBox="0 0 460 800" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Pokemon Card" filter="url(#filter0_d_104_149)">
+<g clip-path="url(#clip0_104_149)">
+<rect width="460" height="800" rx="24" fill="white"/>
+<g id="Group 5">
+<path id="Curva inferior" d="M-1.78814e-06 127V-7.62939e-06H309L236.363 5.18982C144.236 11.7722 58.8216 55.7906 -1.78814e-06 127V127Z" fill="#D9D9D9"/>
+<g id="Frame 24">
+<text id="Pokemon Number" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="20" font-weight="800" letter-spacing="0em"><tspan x="20.1582" y="41.17">#000</tspan></text>
+</g>
+</g>
+<g id="Frame 16">
+<g id="Frame 20">
+<circle id="Type 1" cx="412.5" cy="185.416" r="30" fill="#7F7F7F"/>
+<g id="Frame 31">
+<text id="ELECTRIC" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="377.247" y="239.539">ELECTRIC</tspan></text>
+</g>
+</g>
+<g id="Frame 22">
+<g id="Frame 21">
+<circle id="Type 2" cx="412.5" cy="297.022" r="20" fill="#7F7F7F"/>
+</g>
+<g id="Frame 32">
+<text id="FIGHTING" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="377.213" y="349.798">FIGHTING</tspan></text>
+</g>
+</g>
+</g>
+<rect id="Image" y="22" width="384" height="464" fill="url(#pattern0)"/>
+<g id="Frame">
+<path id="Vector" d="M0 459.041V800H460V390.413C406.025 435.046 276.306 466.508 124.759 466.508C83.0362 466.58 41.3556 464.085 0 459.041Z" fill="#D9D9D9"/>
+</g>
+<g id="Frame 28" clip-path="url(#clip1_104_149)">
+<text id="Pokemon Name" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="24" font-weight="600" letter-spacing="0em"><tspan x="131.84" y="521.604">Pokemon name</tspan></text>
+<g id="Frame 13">
+<g id="Status n&#195;&#163;o mecher">
+<g id="Frame 7">
+<rect x="39" y="539.19" width="120" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="ATTACK" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="64.9062" y="561.35">ATTACK</tspan></text>
+</g>
+<g id="Frame 8">
+<rect x="39" y="589.037" width="120" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="DEFENSE" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="59.5078" y="611.196">DEFENSE</tspan></text>
+</g>
+<g id="Frame 9">
+<rect x="39" y="638.884" width="120" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="SP. ATK" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="66.4375" y="661.043">SP. ATK</tspan></text>
+</g>
+<g id="Frame 10">
+<rect x="39" y="688.73" width="120" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="SP. DEF" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="66.4219" y="710.889">SP. DEF</tspan></text>
+</g>
+<g id="Frame 11">
+<rect x="39" y="738.577" width="120" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="SPEED" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="70.6406" y="760.736">SPEED</tspan></text>
+</g>
+</g>
+<g id="Bars">
+<g id="ATK Bar">
+<rect x="171" y="551.19" width="195" height="10.9048" rx="5.45239" fill="#C9C9C9"/>
+</g>
+<g id="DEF Bar">
+<rect x="171" y="600.667" width="195" height="10.9048" rx="5.45239" fill="#C9C9C9"/>
+</g>
+<g id="SP Atk Bar">
+<rect x="171" y="650.143" width="195" height="10.9048" rx="5.45239" fill="#C9C9C9"/>
+</g>
+<g id="SP Def Bar">
+<rect x="171" y="699.619" width="195" height="10.9048" rx="5.45239" fill="#C9C9C9"/>
+</g>
+<g id="Spd Bar">
+<rect x="171" y="749.095" width="195" height="10.9048" rx="5.45239" fill="#C9C9C9"/>
+</g>
+</g>
+<g id="Status Numbers">
+<g id="ATK">
+<rect x="375.288" y="539.19" width="49.4233" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="000" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="383.57" y="561.35">000</tspan></text>
+</g>
+<g id="DEF">
+<rect x="375.288" y="589.037" width="49.4233" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="000_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="383.57" y="611.196">000</tspan></text>
+</g>
+<g id="SP.ATK">
+<rect x="375.288" y="638.884" width="49.4233" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="000_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="383.57" y="661.043">000</tspan></text>
+</g>
+<g id="SP. DEF_2">
+<rect x="375.288" y="688.73" width="49.4233" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="000_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="383.57" y="710.889">000</tspan></text>
+</g>
+<g id="SPD">
+<rect x="375.288" y="738.577" width="49.4233" height="33.4233" rx="16.7116" fill="#C9C9C9"/>
+<text id="000_5" fill="black" xml:space="preserve" style="white-space: pre" font-family="Montserrat" font-size="16" font-weight="800" letter-spacing="0em"><tspan x="383.57" y="760.736">000</tspan></text>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_104_149" x="-4" y="0" width="468" height="808" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_104_149"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_104_149" result="shape"/>
+</filter>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_104_149" transform="translate(0 0.0862069) scale(0.00195312 0.00161638)"/>
+</pattern>
+<clipPath id="clip0_104_149">
+<rect width="460" height="800" rx="24" fill="white"/>
+</clipPath>
+<clipPath id="clip1_104_149">
+<rect width="407" height="273" fill="white" transform="translate(27 499)"/>
+</clipPath>
+<image id="image0_104_149" data-name="pika.png" width="512" height="512" xlink:href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/25.png"/>
+</defs>
+</svg>

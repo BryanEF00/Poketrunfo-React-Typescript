@@ -5,7 +5,7 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(bg|text|border)-(normal|fighting|flying|poison|ground|rock|bug|ghost|steel|fire|water|grass|electric|psychic|ice|dragon|dark|fairy)-(100|400)/,
+        /(bg|text|border|fill)-(normal|fighting|flying|poison|ground|rock|bug|ghost|steel|fire|water|grass|electric|psychic|ice|dragon|dark|fairy)-(100|400)/,
     },
   ],
   theme: {

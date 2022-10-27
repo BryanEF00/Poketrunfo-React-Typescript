@@ -11,7 +11,7 @@ function PokemonSimpleCard({ pokemon }: IProps) {
   };
 
   return (
-    <div className="w-full bg-gray-100 dark:bg-neutral-800 flex flex-col items-center rounded-xl pt-4 my-1.5">
+    <div className="w-full bg-white dark:bg-neutral-800 flex flex-col items-center rounded-xl pt-4 my-1.5">
       <div className="w-full px-4 font-bold text-sm">
         {`#${pokemon.id.toString().padStart(3, '0')}`}
       </div>

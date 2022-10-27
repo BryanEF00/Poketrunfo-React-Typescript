@@ -59,7 +59,7 @@ function Filter() {
         <div className="w-1/2 flex gap-5 items-center justify-center">
           <p className="w-16">{filter === 'Number' ? filter : 'Name'}</p>
           <button
-            className="flex items-center  w-12 h-3 rounded-full bg-gray-100 gap-5 dark:bg-neutral-800"
+            className="flex items-center  w-12 h-3 rounded-full bg-gray-300 gap-5 dark:bg-neutral-800"
             type="button"
             onClick={handleFilterType}
           >
