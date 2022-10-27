@@ -24,8 +24,8 @@ function PokemonSimpleCard({ pokemon }: IProps) {
       </div>
       <div className="w-full flex flex-col items-center justify-center gap-1 pb-2">
         <div className="flex w-full items-center justify-center gap-0.5 skew-x-[-30deg]">
-          <div className={`h-1.5 w-1/3 bg-${pokemon.types[0]}`} />
-          <div className={`h-1.5 w-1/3 bg-${checkPokemonTypesLength()}`} />
+          <div className={`h-1.5 w-1/3 bg-${pokemon.types[0]}-400`} />
+          <div className={`h-1.5 w-1/3 bg-${checkPokemonTypesLength()}-400`} />
         </div>
         <div>{formatPokemonName(pokemon.name)}</div>
       </div>

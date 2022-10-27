@@ -1,4 +1,4 @@
-import CardHome from '../components/CardHome';
+import PokemonDetailedCard from '../components/PokemonDetailedCard';
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
       </h1>
       <section className="w-full flex flex-col items-center py-5">
         <p className="py-2">This is a Trump Card Game.</p>
-        <CardHome />
+        <PokemonDetailedCard />
       </section>
       <p className="text-center px-5">
         You can build your team, choosing between 151 Pokemons.

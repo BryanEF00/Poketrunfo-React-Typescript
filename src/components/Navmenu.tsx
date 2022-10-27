@@ -30,9 +30,9 @@ function Navmenu() {
     >
       <nav className="w-full flex border-b-2 mx-auto">
         <div className="w-full flex items-center justify-between">
-          <div className="py-5 px-8">
+          <button type="button" className="py-5 px-8">
             <Link to="/">Home</Link>
-          </div>
+          </button>
           <div
             className={`${handleOpenMenu()} w-full h-screen fixed top-0 flex flex-col items-center justify-start pt-20 gap-5 bg-white text-black dark:bg-neutral-900 dark:text-white z-50
             sm:max-w-md sm: mx-auto
