@@ -17,7 +17,7 @@ function Collection() {
 
   return (
     <div className="w-full flex flex-wrap justify-evenly gap-2 py-3">
-      {selectedPokemons.length ? (
+      {selectedPokemons.length >= 1 ? (
         selectedPokemons.map((pokemon) => (
           <div
             key={pokemon.id}
@@ -25,11 +25,11 @@ function Collection() {
           >
             <PokemonCollectionCard pokemon={pokemon} />
             <button
-              className="w-1/2 text-white bg-red-600 py-1 rounded-lg font-semibold shadow"
+              className="w-3/5 text-white bg-red-600 py-1 rounded-lg font-semibold shadow"
               type="button"
               onClick={() => handleRemovePokemon(pokemon)}
             >
-              Save
+              Remove
             </button>
           </div>
         ))
