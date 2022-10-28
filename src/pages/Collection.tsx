@@ -17,7 +17,7 @@ function Collection() {
 
   return (
     <div className="w-full flex flex-wrap justify-evenly gap-2 py-3">
-      {selectedPokemons.length >= 1 ? (
+      {selectedPokemons && selectedPokemons.length >= 1 ? (
         selectedPokemons.map((pokemon) => (
           <div
             key={pokemon.id}
