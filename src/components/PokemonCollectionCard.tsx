@@ -8,37 +8,27 @@ interface IProps {
   pokemon: IPokemon;
 }
 
-function PokemonSimpleCard({ pokemon }: IProps) {
+function PokemonCollectionCard({ pokemon }: IProps) {
   const [openCard, setOpenCard] = useState(false);
-
-  const checkPokemonTypesLength = () => {
-    return pokemon.types.length > 1 ? pokemon.types[1] : pokemon.types[0];
-  };
 
   return (
     <>
       <button
         type="button"
-        className="w-full bg-white dark:bg-neutral-800 flex flex-col items-center rounded-xl pt-4 my-1.5"
+        className="w-full h-56 bg-white dark:bg-neutral-800 flex flex-col justify-end items-center rounded-xl pt-4"
         onClick={() => setOpenCard(true)}
       >
         <div className="w-full px-4 font-bold text-sm text-start">
           {`#${pokemon.id.toString().padStart(3, '0')}`}
         </div>
-        <div className="w-3/4 h-full">
+        <div className="w-10/12 h-full flex py-2">
           <img
-            className="w-full h-full"
-            src={pokemon.sprite.simple}
+            className="m-auto"
+            src={`https://projectpokemon.org/images/normal-sprite/${pokemon.name}.gif`}
             alt={formatPokemonName(pokemon.name)}
           />
         </div>
-        <div className="w-full flex flex-col items-center justify-center gap-1 pb-2">
-          <div className="flex w-full items-center justify-center gap-0.5 skew-x-[-30deg]">
-            <div className={`h-1.5 w-1/3 bg-${pokemon.types[0]}-400`} />
-            <div
-              className={`h-1.5 w-1/3 bg-${checkPokemonTypesLength()}-400`}
-            />
-          </div>
+        <div className="w-full flex flex-col items-center justify-center text-lg gap-1 pb-2">
           <div>{formatPokemonName(pokemon.name)}</div>
         </div>
       </button>
@@ -62,4 +52,4 @@ function PokemonSimpleCard({ pokemon }: IProps) {
   );
 }
 
-export default PokemonSimpleCard;
+export default PokemonCollectionCard;

@@ -1,3 +1,4 @@
+import formatPokemonName from '../helpers/formatPokemonName';
 import { IPokemon } from '../interfaces/IPokemon';
 
 interface IProps {
@@ -32,13 +33,13 @@ function PokemonDetailedCard({ pokemon }: IProps) {
   return (
     <div className="w-11/12 shadow rounded-3xl relative flex justify-center items-center ">
       <p className="w-full absolute text-black text-center font-bold text-2xl bottom-[33.80%]">
-        {pokemon.name}
+        {formatPokemonName(pokemon.name)}
       </p>
-      <p className="min-w-[80px] absolute text-black text-center font-semibold text-base uppercase top-[28.5%] right-3">
+      <p className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[28%] right-[2%]">
         {pokemon.types[0]}
       </p>
       {pokemon.types.length > 1 && (
-        <p className="min-w-[80px] absolute text-black text-center font-semibold text-base uppercase top-[41.35%] right-3">
+        <p className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[40.35%] right-[2%]">
           {pokemon.types[1]}
         </p>
       )}
@@ -52,8 +53,8 @@ function PokemonDetailedCard({ pokemon }: IProps) {
                 d="M-1.78814e-06 127V-7.62939e-06H309L236.363 5.18982C144.236 11.7722 58.8216 55.7906 -1.78814e-06 127V127Z"
                 className={
                   pokemon.types.length > 1
-                    ? `fill-${pokemon.types[1]}-400`
-                    : `fill-${pokemon.types[0]}-400`
+                    ? `fill-${pokemon.types[1]}-100`
+                    : `fill-${pokemon.types[0]}-100`
                 }
               />
               <g id="Frame 24">
@@ -108,7 +109,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
               <path
                 id="Vector"
                 d="M0 459.041V800H460V390.413C406.025 435.046 276.306 466.508 124.759 466.508C83.0362 466.58 41.3556 464.085 0 459.041Z"
-                className={`fill-${pokemon.types[0]}-400`}
+                className={`fill-${pokemon.types[0]}-100`}
               />
             </g>
             <g id="Frame 28" clipPath="url(#clip1_104_149)">
@@ -456,7 +457,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
           >
             <use
               xlinkHref="#image0_104_149"
-              transform="translate(0 0.0862069) scale(0.00195312 0.00161638)"
+              transform="translate(0 0.0862069) scale(0.00185312 0.00161638)"
             />
           </pattern>
           <clipPath id="clip0_104_149">

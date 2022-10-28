@@ -64,7 +64,7 @@ function Navmenu() {
           </button>
         </div>
       </nav>
-      <section className="w-full mx-auto bg-zinc-100 dark:bg-neutral-900">
+      <section className="w-full min-h-[calc(100vh-70px)] mx-auto bg-zinc-100 dark:bg-neutral-900">
         <Outlet />
       </section>
     </div>
