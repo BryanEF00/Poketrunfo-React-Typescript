@@ -15,20 +15,20 @@ function PokemonCollectionCard({ pokemon }: IProps) {
     <>
       <button
         type="button"
-        className="w-full h-48 bg-white dark:bg-neutral-800 flex flex-col justify-between items-center rounded-xl "
+        className="w-full h-52 bg-white dark:bg-neutral-800 flex flex-col justify-end items-center rounded-xl py-3"
         onClick={() => setOpenCard(true)}
       >
-        <div className="w-full px-4 py-2 font-bold text-sm text-start">
+        <div className="w-full px-4 font-bold text-sm text-start">
           {`#${pokemon.id.toString().padStart(3, '0')}`}
         </div>
-        <div className="max-w-[80%]">
+        <div className="h-full flex">
           <img
-            className="object-scale-down m-auto"
+            className="max-h-[90%] m-auto object-scale-down"
             src={`https://projectpokemon.org/images/normal-sprite/${pokemon.name}.gif`}
             alt={formatPokemonName(pokemon.name)}
           />
         </div>
-        <div className="w-full flex flex-col items-center justify-center text-lg gap-1">
+        <div className="w-full flex flex-col items-center justify-center text-lg">
           <div>{formatPokemonName(pokemon.name)}</div>
         </div>
       </button>
