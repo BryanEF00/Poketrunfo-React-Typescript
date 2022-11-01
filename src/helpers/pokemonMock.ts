@@ -4,6 +4,7 @@ const pokemonMock: IPokemon = {
   id: 25,
   name: 'Pikachu',
   sprite: {
+    back: '',
     simple:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
     detailed:
