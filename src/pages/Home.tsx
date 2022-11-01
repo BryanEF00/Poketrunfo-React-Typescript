@@ -12,8 +12,8 @@ function Home() {
         <PokemonDetailedCard pokemon={pokemonMock} />
       </section>
       <p className="text-center">
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        You can build your team, choosing between the Pokémon's first generation
+        You can build your team, choosing between the Pokémon&apos;s first
+        generation
       </p>
     </div>
   );

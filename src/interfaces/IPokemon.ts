@@ -7,8 +7,9 @@ export interface IPokemon {
   id: number;
   name: string;
   sprite: {
-    simple: string;
+    back: string;
     detailed: string;
+    simple: string;
   };
   stats: IStatus[];
   types: string[];

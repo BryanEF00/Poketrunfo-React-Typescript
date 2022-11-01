@@ -15,7 +15,7 @@ function PokemonCollectionCard({ pokemon }: IProps) {
     <>
       <button
         type="button"
-        className="w-full h-52 bg-white dark:bg-neutral-800 flex flex-col justify-end items-center rounded-xl py-3"
+        className="w-full h-52 bg-white dark:bg-neutral-800 flex flex-col justify-end items-center rounded-xl pt-2 pb-1"
         onClick={() => setOpenCard(true)}
       >
         <div className="w-full px-4 font-bold text-sm text-start">
@@ -35,15 +35,15 @@ function PokemonCollectionCard({ pokemon }: IProps) {
       {openCard && (
         <div className="w-full h-screen fixed top-0 left-0 z-20">
           <div className="w-full h-full flex justify-center items-center backdrop-blur-sm backdrop-brightness-50">
-            <button
-              className="absolute top-[17%] right-[15%] z-20"
-              type="button"
-              onClick={() => setOpenCard(false)}
-            >
-              <FaTimes size={28} className="text-red-500" />
-            </button>
-            <div className="w-11/12 flex justify-center">
+            <div className="w-11/12 relative flex justify-center">
               <PokemonDetailedCard pokemon={pokemon} />
+              <button
+                className="absolute top-[5%] right-[12.5%] z-20"
+                type="button"
+                onClick={() => setOpenCard(false)}
+              >
+                <FaTimes size={28} className="text-red-500" />
+              </button>
             </div>
           </div>
         </div>
