@@ -1,10 +1,13 @@
 import { Link, Outlet } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import ThemeSwitcher from './ThemeSwitcher';
-import Logo from '../../public/PoketrunfoLogo.svg';
+import LogoLight from '../assets/Poketrunfo_Logo_LightTheme.svg';
+import LogoDark from '../assets/Poketrunfo_Logo_DarkTheme.svg';
+import AppContext from '../context/AppContext';
 
 function Navmenu() {
+  const { theme } = useContext(AppContext);
   const [openMenu, setOpenMenu] = useState('initialRender');
 
   const handleOpenMenu = () => {
@@ -33,7 +36,11 @@ function Navmenu() {
         <div className="w-full flex items-center justify-between">
           <button type="button" className="px-8">
             <Link to="/">
-              <img className="h-16 py-1" src={Logo} alt="Logo" />
+              <img
+                className="h-16 py-1"
+                src={theme === 'light' ? LogoLight : LogoDark}
+                alt="Logo"
+              />
             </Link>
           </button>
           <div
