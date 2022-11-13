@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useMemo, useState } from 'react';
 import { IAppContext } from '../interfaces/IAppContext';
 import { IInitialState } from '../interfaces/IInitialState';
+import { IPokemon } from '../interfaces/IPokemon';
 import { readCollection } from '../services/localStorage/collection';
 import { readTheme } from '../services/localStorage/theme';
 import fetchAllPokemons from '../services/pokeApi';
@@ -14,6 +15,8 @@ const INITIAL_STATE: IInitialState = {
   pokemons: [],
   filteredPokemons: [],
   selectedPokemons: [],
+  cpuPokemons: [],
+  cpuSelectedPokemon: {} as IPokemon,
   theme: readTheme() ? readTheme() : 'light',
 };
 

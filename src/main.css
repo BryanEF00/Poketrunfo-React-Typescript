@@ -6,4 +6,9 @@
 * {
   -webkit-tap-highlight-color: transparent;
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+.pokeball {
+  background: linear-gradient(to bottom, red 50%, white 50%);
 }

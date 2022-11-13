@@ -5,6 +5,9 @@ import ThemeSwitcher from './ThemeSwitcher';
 import LogoLight from '../assets/Poketrunfo_Logo_LightTheme.svg';
 import LogoDark from '../assets/Poketrunfo_Logo_DarkTheme.svg';
 import AppContext from '../context/AppContext';
+import DeckIcon from '../icons/DeckIcon';
+import CollectionIcon from '../icons/CollectionIcon';
+import GameIcon from '../icons/GameIcon';
 
 function Navmenu() {
   const { theme } = useContext(AppContext);
@@ -22,9 +25,9 @@ function Navmenu() {
   };
 
   const links = [
-    { url: '/deck', name: 'Deck' },
-    { url: '/collection', name: 'Collection' },
-    { url: '/game', name: 'Game' },
+    { url: '/deck', name: 'Deck', icon: <DeckIcon /> },
+    { url: '/collection', name: 'Collection', icon: <CollectionIcon /> },
+    { url: '/game', name: 'Game', icon: <GameIcon /> },
   ];
 
   return (
@@ -44,11 +47,11 @@ function Navmenu() {
             </Link>
           </button>
           <div
-            className={`${handleOpenMenu()} w-full h-screen fixed top-0 flex flex-col items-center justify-start pt-20 gap-5 bg-white text-black dark:bg-neutral-900 dark:text-white z-50
+            className={`${handleOpenMenu()} w-full h-screen fixed top-0 flex flex-col items-center justify-start pt-24 bg-white text-black dark:bg-neutral-900 dark:text-white z-50
             sm:max-w-md sm: mx-auto
             `}
           >
-            <div className="absolute w-full flex items-center justify-between top-0 p-8">
+            <div className="absolute w-full min-h-[96px] flex items-center justify-between top-0 py-4 px-8">
               <ThemeSwitcher />
               <button type="button" onClick={() => setOpenMenu('false')}>
                 <FaTimes size={28} className="text-red-500" />
@@ -56,11 +59,12 @@ function Navmenu() {
             </div>
             {links.map((link) => (
               <Link
-                className="w-full border-b-2 px-2 pt-5 pb-2 uppercase"
+                className="w-full flex items-center gap-4 border-b-2 uppercase"
                 key={link.name}
                 to={link.url}
                 onClick={() => setOpenMenu('false')}
               >
+                {link.icon}
                 {link.name}
               </Link>
             ))}

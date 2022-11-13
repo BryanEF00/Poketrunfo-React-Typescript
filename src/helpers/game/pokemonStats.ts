@@ -1,3 +1,15 @@
-const pokemonStats = ['Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed'];
+export const pokemonStatsName = [
+  'Attack',
+  'Defense',
+  'Sp. Atk',
+  'Sp. Def',
+  'Speed',
+];
 
-export default pokemonStats;
+export const pokemonStatsValue = [
+  'attack',
+  'defense',
+  'special-attack',
+  'special-defense',
+  'speed',
+];

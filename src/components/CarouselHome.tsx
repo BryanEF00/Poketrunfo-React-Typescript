@@ -1,4 +1,4 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import PainelColecao from '../assets/Painel_Colecao.svg';
 import PainelCombate from '../assets/Painel_Combate.svg';
@@ -12,13 +12,11 @@ function CarouselHome() {
         centerMode
         centerSlidePercentage={80}
         dynamicHeight
-        emulateTouch
         infiniteLoop
         showIndicators={false}
         showStatus={false}
         showThumbs={false}
         stopOnHover
-        swipeable
         useKeyboardArrows
       >
         <div className="mx-1">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
+import formatGifName from '../helpers/formatGifName';
 import formatPokemonName from '../helpers/formatPokemonName';
 import { IPokemon } from '../interfaces/IPokemon';
 import PokemonDetailedCard from './PokemonDetailedCard';
@@ -24,7 +25,9 @@ function PokemonCollectionCard({ pokemon }: IProps) {
         <div className="h-full flex">
           <img
             className="max-h-[90%] m-auto object-scale-down"
-            src={`https://projectpokemon.org/images/normal-sprite/${pokemon.name}.gif`}
+            src={`https://projectpokemon.org/images/normal-sprite/${formatGifName(
+              pokemon.name
+            )}.gif`}
             alt={formatPokemonName(pokemon.name)}
           />
         </div>

@@ -1,7 +1,8 @@
 import { useContext } from 'react';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import AppContext from '../context/AppContext';
 import { saveTheme } from '../services/localStorage/theme';
+import DarkThemeIcon from '../assets/DarkThemeIcon.svg';
+import LightThemeIcon from '../assets/LightThemeIcon.svg';
 
 function ThemeSwitcher() {
   const { theme, state, setState } = useContext(AppContext);
@@ -13,11 +14,15 @@ function ThemeSwitcher() {
   };
 
   return (
-    <button className="" type="button" onClick={handleThemeSwitch}>
+    <button type="button" onClick={handleThemeSwitch}>
       {theme === 'light' ? (
-        <MdLightMode size={32} className="text-yellow-400" />
+        <div>
+          <img className="w-12" src={DarkThemeIcon} alt="Dark Theme Icon" />
+        </div>
       ) : (
-        <MdDarkMode size={32} className="text-white" />
+        <div className="w-16">
+          <img src={LightThemeIcon} alt="Light Theme Icon" />
+        </div>
       )}
     </button>
   );
