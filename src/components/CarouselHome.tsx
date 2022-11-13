@@ -13,11 +13,15 @@ function CarouselHome() {
         centerSlidePercentage={80}
         dynamicHeight
         infiniteLoop
+        preventMovementUntilSwipeScrollTolerance
         showIndicators={false}
         showStatus={false}
         showThumbs={false}
         stopOnHover
+        swipeScrollTolerance={50}
+        swipeable
         useKeyboardArrows
+        emulateTouch
       >
         <div className="mx-1">
           <img src={PainelDeck} alt="Painel Colecao" />
