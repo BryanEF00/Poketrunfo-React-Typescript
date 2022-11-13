@@ -116,7 +116,10 @@ function CardGame() {
         <TurnIndicator turn={turnsLeft} />
       </div>
       {endGame ? (
-        <div className="h-[40vh] w-full flex flex-col justify-between text-xl bg-white rounded-lg p-5">
+        <div
+          className="h-[40vh] w-full flex flex-col justify-between text-xl bg-white 
+        dark:bg-neutral-800 rounded-lg p-5"
+        >
           <div>Game Result:</div>
           <div
             className={`${compareScore(matchScore.player, matchScore.cpu).color}
@@ -124,9 +127,13 @@ function CardGame() {
           >
             {compareScore(matchScore.player, matchScore.cpu).text}
           </div>
-          <div>
+          <div className="text-black dark:text-white">
             <div>Thank you for playing</div>
             <div>my game!</div>
+          </div>
+          <div>
+            To exit, please use the{' '}
+            <span className="text-[#9E69E3] font-bold">Run</span> button.
           </div>
         </div>
       ) : (
