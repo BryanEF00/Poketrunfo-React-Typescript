@@ -31,11 +31,20 @@ function PokemonDetailedCard({ pokemon }: IProps) {
   });
 
   return (
-    <div className="w-10/12 shadow rounded-3xl relative flex justify-center items-center ">
-      <p className="w-full absolute text-black text-center font-bold text-2xl bottom-[33.80%]">
+    <div className="w-full shadow rounded-3xl relative flex justify-center items-center ">
+      <p
+        className="w-full absolute text-black text-center font-bold text-2xl bottom-[33.80%]
+        md:text-3xl
+        lg:text-2xl"
+      >
         {formatPokemonName(pokemon.name)}
       </p>
-      <p className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[28%] right-[2%]">
+      <p
+        className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[28%] right-[2%]
+        sm:min-w-[15vmin] sm:right-[2%]
+        md:min-w-[12vmin] md:text-[2vmin] md:right-[3%]
+        lg:min-w-[5vmin] lg:text-[1.3vmin] lg:right-[3%]"
+      >
         {pokemon.types[0]}
       </p>
       {pokemon.types.length > 1 && (

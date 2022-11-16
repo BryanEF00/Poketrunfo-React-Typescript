@@ -14,14 +14,22 @@ function ThemeSwitcher() {
   };
 
   return (
-    <button type="button" onClick={handleThemeSwitch}>
+    <button
+      className="w-14 h-14 mr-5"
+      type="button"
+      onClick={handleThemeSwitch}
+    >
       {theme === 'light' ? (
         <div>
-          <img className="w-16" src={LightThemeIcon} alt="Dark Theme Icon" />
+          <img src={LightThemeIcon} alt="Dark Theme Icon" />
         </div>
       ) : (
-        <div className="w-12">
-          <img src={DarkThemeIcon} alt="Light Theme Icon" />
+        <div>
+          <img
+            className="w-12 mx-auto"
+            src={DarkThemeIcon}
+            alt="Light Theme Icon"
+          />
         </div>
       )}
     </button>
