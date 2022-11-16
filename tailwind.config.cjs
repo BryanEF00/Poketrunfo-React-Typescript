@@ -89,6 +89,7 @@ module.exports = {
         slideUp: 'slideUp 0.5s forwards',
         slideRight: 'slideRight 0.5s forwards',
         slideLeft: 'slideLeft 0.5s forwards',
+        scaleUp: 'scaleUp 0.5s',
       },
       keyframes: {
         slideDown: {
@@ -106,6 +107,10 @@ module.exports = {
         slideLeft: {
           '0%': { transform: 'translateX(150%)' },
           '100%': { transform: 'translateX(0%)' },
+        },
+        scaleUp: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
         },
       },
     },

@@ -43,7 +43,7 @@ function PokemonSimpleCard({ pokemon }: IProps) {
         </div>
       </button>
       {openCard && (
-        <div className="w-full h-screen fixed top-0 left-0 z-20">
+        <div className="w-full h-screen fixed top-0 left-0 z-50">
           <div className="w-full h-full flex justify-center items-center backdrop-blur-sm backdrop-brightness-50">
             <div className="w-11/12 relative flex justify-center">
               <PokemonDetailedCard pokemon={pokemon} />

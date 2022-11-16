@@ -8,6 +8,7 @@ import AppContext from '../context/AppContext';
 import DeckIcon from '../icons/DeckIcon';
 import CollectionIcon from '../icons/CollectionIcon';
 import GameIcon from '../icons/GameIcon';
+import BackToTopBtn from './BackToTopBtn';
 
 function Navmenu() {
   const { theme } = useContext(AppContext);
@@ -81,6 +82,7 @@ function Navmenu() {
       <section className="w-full min-h-[calc(100vh-70px)] mx-auto bg-zinc-100 dark:bg-neutral-900">
         <Outlet />
       </section>
+      <BackToTopBtn />
     </div>
   );
 }
