@@ -48,7 +48,7 @@ function PokemonSimpleCard({ pokemon }: IProps) {
             <div className="w-11/12 relative flex justify-center">
               <PokemonDetailedCard pokemon={pokemon} />
               <button
-                className="absolute top-[5%] right-[12.5%] z-20"
+                className="absolute top-[5%] right-[12.5%] z-50"
                 type="button"
                 onClick={() => setOpenCard(false)}
               >

@@ -31,7 +31,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
   });
 
   return (
-    <div className="w-11/12 shadow rounded-3xl relative flex justify-center items-center ">
+    <div className="w-10/12 shadow rounded-3xl relative flex justify-center items-center ">
       <p className="w-full absolute text-black text-center font-bold text-2xl bottom-[33.80%]">
         {formatPokemonName(pokemon.name)}
       </p>

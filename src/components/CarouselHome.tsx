@@ -24,13 +24,21 @@ function CarouselHome() {
         emulateTouch
       >
         <div className="mx-1">
-          <img src={PainelDeck} alt="Painel Colecao" />
+          <img className="max-h-[60%]" src={PainelDeck} alt="Painel Colecao" />
         </div>
         <div className="mx-1">
-          <img src={PainelColecao} alt="Painel Colecao" />
+          <img
+            className="max-h-[60%]"
+            src={PainelColecao}
+            alt="Painel Colecao"
+          />
         </div>
         <div className="mx-1">
-          <img src={PainelCombate} alt="Painel Colecao" />
+          <img
+            className="max-h-[60%]"
+            src={PainelCombate}
+            alt="Painel Colecao"
+          />
         </div>
       </Carousel>
     </div>
