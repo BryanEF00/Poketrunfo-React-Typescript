@@ -17,11 +17,11 @@ function ThemeSwitcher() {
     <button type="button" onClick={handleThemeSwitch}>
       {theme === 'light' ? (
         <div>
-          <img className="w-12" src={DarkThemeIcon} alt="Dark Theme Icon" />
+          <img className="w-16" src={LightThemeIcon} alt="Dark Theme Icon" />
         </div>
       ) : (
-        <div className="w-16">
-          <img src={LightThemeIcon} alt="Light Theme Icon" />
+        <div className="w-12">
+          <img src={DarkThemeIcon} alt="Light Theme Icon" />
         </div>
       )}
     </button>
