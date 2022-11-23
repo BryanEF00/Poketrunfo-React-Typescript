@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
 import Filter from '../components/Filter';
-import PokemonDetailedCard from '../components/PokemonDetailedCard';
 import PokemonSimpleCard from '../components/PokemonSimpleCard';
 import AppContext from '../context/AppContext';
 import { IPokemon } from '../interfaces/IPokemon';
@@ -11,13 +10,9 @@ function Deck() {
     useContext(AppContext);
 
   const [loading, setLoading] = useState(true);
-  const [selectedCard, setSelectedCard] = useState(pokemons[0]);
 
   useEffect(() => {
-    if (pokemons.length) {
-      setSelectedCard(pokemons[0]);
-      setLoading(false);
-    }
+    if (pokemons.length) setLoading(false);
   }, [pokemons]);
 
   const handleSelectedPokemon = (pokemon: IPokemon) => {

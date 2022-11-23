@@ -42,8 +42,8 @@ function PokemonDetailedCard({ pokemon }: IProps) {
       <p
         className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[28%] right-[2%]
         sm:min-w-[15vmin] sm:right-[2%]
-        md:min-w-[12vmin] md:text-[2vmin] md:right-[3%]
-        lg:min-w-[5vmin] lg:text-[1.3vmin] lg:right-[3%]"
+        md:min-w-[12vmin] md:text-[2vmin] md:right-[0%]
+        lg:min-w-[5vmin] lg:text-[1.3vmin] lg:right-[7%]"
       >
         {pokemon.types[0]}
       </p>
@@ -51,8 +51,8 @@ function PokemonDetailedCard({ pokemon }: IProps) {
         <p
           className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[40.35%] right-[2%]
         sm:min-w-[15vmin] sm:right-[2%]
-        md:min-w-[12vmin] md:text-[2vmin] md:right-[3%]
-        lg:min-w-[5vmin] lg:text-[1.3vmin] lg:right-[3%]
+        md:min-w-[12vmin] md:text-[2vmin] md:right-[0%]
+        lg:min-w-[5vmin] lg:text-[1.3vmin] lg:right-[7%]
         "
         >
           {pokemon.types[1]}

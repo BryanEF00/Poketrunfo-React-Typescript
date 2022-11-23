@@ -52,9 +52,10 @@ function PokemonSimpleCard({ pokemon }: IProps) {
           <div className="w-full h-full flex justify-center items-center backdrop-blur-sm backdrop-brightness-50">
             <div
               className="w-11/12 relative flex justify-center
-            sm:w-[35%]
-            xl:w-[25%]
-            3xl:w-[15%]
+              md:w-[45%]
+              lg:w-[35%]
+              xl:w-[25%]
+              3xl:w-[15%]
             "
             >
               <PokemonDetailedCard pokemon={pokemon} />

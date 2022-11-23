@@ -16,7 +16,9 @@ function PokemonCollectionCard({ pokemon }: IProps) {
     <>
       <button
         type="button"
-        className="w-full h-52 bg-white dark:bg-neutral-800 flex flex-col justify-end items-center rounded-xl pt-2 pb-1"
+        className="w-full h-52 bg-white dark:bg-neutral-800 flex flex-col justify-end items-center rounded-xl pt-2 pb-1
+        md:h-56
+        "
         onClick={() => setOpenCard(true)}
       >
         <div className="w-full px-4 font-bold text-sm text-start">
@@ -24,7 +26,7 @@ function PokemonCollectionCard({ pokemon }: IProps) {
         </div>
         <div className="h-full flex">
           <img
-            className="max-h-[90%] m-auto object-scale-down"
+            className="max-w-[90%] max-h-[90%] m-auto object-scale-down"
             src={`https://projectpokemon.org/images/normal-sprite/${formatGifName(
               pokemon.name
             )}.gif`}
@@ -36,9 +38,16 @@ function PokemonCollectionCard({ pokemon }: IProps) {
         </div>
       </button>
       {openCard && (
-        <div className="w-full h-screen fixed top-0 left-0 z-20">
+        <div className="w-full h-screen fixed top-0 left-0 z-50">
           <div className="w-full h-full flex justify-center items-center backdrop-blur-sm backdrop-brightness-50">
-            <div className="w-11/12 relative flex justify-center">
+            <div
+              className="w-11/12 relative flex justify-center
+              md:w-[45%]
+              lg:w-[35%]
+              xl:w-[25%]
+              3xl:w-[15%]
+            "
+            >
               <PokemonDetailedCard pokemon={pokemon} />
               <button
                 className="absolute top-[5%] right-[12.5%] z-20"
