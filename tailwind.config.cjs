@@ -86,7 +86,6 @@ module.exports = {
       },
       animation: {
         slideDown: 'slideDown 0.5s forwards',
-        slideUp: 'slideUp 0.5s forwards',
         slideRight: 'slideRight 0.5s forwards',
         slideLeft: 'slideLeft 0.5s forwards',
         scaleUp: 'scaleUp 0.5s',
@@ -96,10 +95,7 @@ module.exports = {
           '0%': { transform: 'translateY(-100vh)' },
           '100%': { transform: 'translateY(0vh)' },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(0vh)' },
-          '100%': { transform: 'translateY(-100vh)' },
-        },
+
         slideRight: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(150%)' },

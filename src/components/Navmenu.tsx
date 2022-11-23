@@ -12,21 +12,12 @@ import BackToTopBtn from './BackToTopBtn';
 
 function Navmenu() {
   const { theme } = useContext(AppContext);
-  const [openMenu, setOpenMenu] = useState('initialRender');
+  const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenMenu = () => {
-    if (openMenu === 'initialRender') {
-      return 'hidden';
-    }
+    const checkState = openMenu ? 'animate-slideDown' : 'hidden';
 
-    if (window.innerWidth < 640) {
-      const checkState =
-        openMenu === 'true' ? 'animate-slideDown' : 'animate-slideUp';
-
-      return checkState;
-    }
-
-    return '';
+    return checkState;
   };
 
   const links = [
@@ -50,7 +41,8 @@ function Navmenu() {
               </Link>
             </button>
             <div
-              className={`${handleOpenMenu()} w-full h-screen fixed top-0 flex flex-col justify-start pt-24 bg-white text-black dark:bg-neutral-900 dark:text-white z-50
+              className={`${handleOpenMenu()} 
+              w-full h-screen fixed top-0 flex flex-col justify-start pt-24 bg-white text-black dark:bg-neutral-900 dark:text-white z-50
              
             sm:h-[68px] sm:flex sm:justify-between sm:items-center sm:relative
             sm:bg-transparent sm:dark:bg-transparent 
@@ -61,10 +53,10 @@ function Navmenu() {
                 {links.map((link) => (
                   <Link
                     className="w-full flex items-center gap-4 border-b-2 uppercase p-3
-                sm:w-fit sm:border-none sm:p-0 sm:gap-0"
+                sm:w-fit sm:border-none sm:p-0 sm:gap-0 sm:font-semibold"
                     key={link.name}
                     to={link.url}
-                    onClick={() => setOpenMenu('false')}
+                    onClick={() => setOpenMenu(false)}
                   >
                     <div className="w-[68px] h-[68px] sm:p-2">{link.icon}</div>
                     {link.name}
@@ -76,7 +68,7 @@ function Navmenu() {
               sm:w-fit sm:relative sm:p-0"
               >
                 <ThemeSwitcher />
-                <button type="button" onClick={() => setOpenMenu('false')}>
+                <button type="button" onClick={() => setOpenMenu(false)}>
                   <FaTimes size={28} className="text-red-500 sm:hidden" />
                 </button>
               </div>
@@ -85,7 +77,7 @@ function Navmenu() {
               className="py-5 px-8
             sm:hidden"
               type="button"
-              onClick={() => setOpenMenu('true')}
+              onClick={() => setOpenMenu(true)}
             >
               <FaBars size={28} />
             </button>
