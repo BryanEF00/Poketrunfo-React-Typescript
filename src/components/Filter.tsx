@@ -53,10 +53,10 @@ function Filter() {
   };
 
   return (
-    <div className="flex flex-col gap-4 text-lg p-5">
+    <div className="flex flex-col gap-4 text-lg p-5 sm:w-11/12 sm:mx-auto">
       <div className="flex justify-between items-center">
         <h1 className="w-1/2 font-bold uppercase ">Filter :</h1>
-        <div className="w-1/2 flex gap-5 items-center justify-center">
+        <div className="w-1/2 flex gap-5 items-center justify-end">
           <p className="w-16">{filter === 'Number' ? filter : 'Name'}</p>
           <button
             className="flex items-center  w-12 h-3 rounded-full bg-gray-300 gap-5 dark:bg-neutral-800"

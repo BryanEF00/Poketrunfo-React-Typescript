@@ -20,7 +20,9 @@ function PokemonSimpleCard({ pokemon }: IProps) {
       <button
         type="button"
         className="w-full bg-white dark:bg-neutral-800 flex flex-col items-center rounded-xl pt-4 my-1.5"
-        onClick={() => setOpenCard(true)}
+        onClick={() => {
+          setOpenCard(true);
+        }}
       >
         <div className="w-full px-4 font-bold text-sm text-start">
           {`#${pokemon.id.toString().padStart(3, '0')}`}
@@ -43,12 +45,21 @@ function PokemonSimpleCard({ pokemon }: IProps) {
         </div>
       </button>
       {openCard && (
-        <div className="w-full h-screen fixed top-0 left-0 z-50">
+        <div
+          className="w-full h-screen fixed top-0 left-0 z-50
+        "
+        >
           <div className="w-full h-full flex justify-center items-center backdrop-blur-sm backdrop-brightness-50">
-            <div className="w-11/12 relative flex justify-center">
+            <div
+              className="w-11/12 relative flex justify-center
+            sm:w-[35%]
+            xl:w-[25%]
+            3xl:w-[15%]
+            "
+            >
               <PokemonDetailedCard pokemon={pokemon} />
               <button
-                className="absolute top-[5%] right-[12.5%] z-50"
+                className="absolute top-[5%] right-[10%] z-50"
                 type="button"
                 onClick={() => setOpenCard(false)}
               >

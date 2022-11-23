@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1921px',
+      },
       colors: {
         normal: {
           100: '#A8A878',
