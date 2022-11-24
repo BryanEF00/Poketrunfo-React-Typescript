@@ -15,7 +15,7 @@ function ThemeSwitcher() {
 
   return (
     <button
-      className="w-14 h-14 mr-5"
+      className="w-14 h-14 mx-2"
       type="button"
       onClick={handleThemeSwitch}
     >

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import AppContext from '../context/AppContext';
+import formatGifName from '../helpers/formatGifName';
 import formatPokemonName from '../helpers/formatPokemonName';
 import compareScore from '../helpers/game/compareScore';
 import compareStats from '../helpers/game/compareStats';
@@ -14,6 +15,7 @@ import {
 import removePokemon from '../helpers/game/removePokemon';
 import { IPokemon } from '../interfaces/IPokemon';
 import GameWarning from './GameWarning';
+import Loading from './Loading';
 import PokemonGameTeam from './PokemonGameTeam';
 import TurnIndicator from './TurnIndicator';
 
@@ -97,22 +99,49 @@ function CardGame() {
   };
 
   return loading ? (
-    <div className="w-full min-h-[50vh] flex items-center justify-center font-bold text-2xl">
-      Loading...
-    </div>
+    <Loading />
   ) : (
-    <div className="w-full min-h-[calc(100vh-70px)] flex flex-col justify-between items-center">
-      <div className="w-full flex flex-col items-center">
-        <div className="w-full h-full flex items-center justify-center py-2 px-4 gap-10">
+    <div
+      className="w-full min-h-[calc(100vh-70px)] flex flex-col
+        justify-between items-center gap-y-5
+        md:gap-0 md:text-base
+      "
+    >
+      <div
+        className="w-full flex flex-col items-center border-b-2
+        justify-center
+        md:flex-row md:justify-evenly 
+      "
+      >
+        <div
+          className="w-full h-full flex items-center justify-center py-2 px-4 gap-10
+          md:w-1/4
+        "
+        >
           <div>
-            <div>Player</div>
+            <div className="font-semibold">PLAYER</div>
             <div>{matchScore.player}</div>
           </div>
           <div>
-            <div>CPU</div>
+            <div className="font-semibold">CPU</div>
             <div>{matchScore.cpu}</div>
           </div>
         </div>
+        <select
+          className="w-3/4 py-2 px-5 my-2 text-black font-semibold text-base uppercase
+          sm:w-2/3
+          md:w-1/3
+          "
+          value={status}
+          disabled={!playerSelectTurn || matchResults}
+          onChange={({ target: { value } }) => setStatus(value)}
+        >
+          {pokemonStatsValue.map((value, index) => (
+            <option key={value} value={value}>
+              {pokemonStatsName[index]}
+            </option>
+          ))}
+        </select>
         <TurnIndicator turn={turnsLeft} />
       </div>
       {endGame ? (
@@ -137,89 +166,103 @@ function CardGame() {
           </div>
         </div>
       ) : (
-        <>
-          <select
-            className="w-4/5 py-2 px-5 my-2 text-black"
-            value={status}
-            disabled={!playerSelectTurn || matchResults}
-            onChange={({ target: { value } }) => setStatus(value)}
+        <div className="w-full flex flex-col justify-center">
+          <div
+            className="w-full flex justify-evenly
+              md:justify-center md:gap-5
+            "
           >
-            {pokemonStatsValue.map((value, index) => (
-              <option key={value} value={value}>
-                {pokemonStatsName[index]}
-              </option>
-            ))}
-          </select>
-          <div className="w-full flex flex-col justify-center">
-            <div className="w-full flex justify-evenly ">
-              <div className="w-[45%]">
-                <img
-                  className="w-full"
-                  src={currentPokemon.sprite.back}
-                  alt="Player Current Pokemon"
-                />
-              </div>
-              <div className="w-[45%]">
-                <img
-                  className={`w-full ${displayCpuImage()} 
-                `}
-                  src={currentCpuPokemon?.sprite.simple}
-                  alt="CPU Current Pokemon"
-                />
-              </div>
+            <div
+              className="w-[45%]
+                  md:w-1/5
+                  lg:w-1/6
+                "
+            >
+              <img
+                className="w-full"
+                src={currentPokemon.sprite.back}
+                alt="Player Current Pokemon"
+              />
             </div>
-            <div className="h-28">
-              {matchResults ? (
-                <button
-                  type="button"
-                  onClick={handleNextRound}
-                  className="bg-green-600 h-11 px-5 text-white font-semibold rounded-lg"
-                >
-                  {turnsLeft > 1 ? 'Next Turn' : 'End Game'}
-                </button>
-              ) : (
-                <div className="h-11 font-bold">VS</div>
-              )}
-              <div
-                className={`${matchResults ? 'opacity-100' : 'opacity-0'} 
-              flex justify-evenly font-bold py-2 `}
+            <div
+              className="w-[45%]
+                  md:w-1/5
+                  lg:w-1/6
+                "
+            >
+              <img
+                className={`w-full ${displayCpuImage()}`}
+                src={currentCpuPokemon?.sprite.simple}
+                alt="CPU Current Pokemon"
+              />
+            </div>
+          </div>
+          <div className="h-28">
+            {matchResults ? (
+              <button
+                type="button"
+                onClick={handleNextRound}
+                className="bg-green-600 h-11 px-5 text-white font-semibold rounded-lg"
               >
-                <div className="w-[45%]">
-                  <div
-                    className={
-                      compareStats(matchStats.player, matchStats.cpu).color
-                    }
-                  >
-                    {compareStats(matchStats.player, matchStats.cpu).text}
-                  </div>
-                  {matchResults && (
-                    <div>{findStats(currentPokemon, status)}</div>
-                  )}
+                {turnsLeft > 1 ? 'Next Turn' : 'End Game'}
+              </button>
+            ) : (
+              <div className="h-11 font-bold">VS</div>
+            )}
+            <div
+              className={`${matchResults ? 'opacity-100' : 'opacity-0'} 
+              flex justify-evenly font-bold py-2 `}
+            >
+              <div className="w-[45%]">
+                <div
+                  className={
+                    compareStats(matchStats.player, matchStats.cpu).color
+                  }
+                >
+                  {compareStats(matchStats.player, matchStats.cpu).text}
                 </div>
-                <div className="w-[45%]">
-                  <div
-                    className={
-                      compareStats(matchStats.cpu, matchStats.player).color
-                    }
-                  >
-                    {compareStats(matchStats.cpu, matchStats.player).text}
-                  </div>
-                  {matchResults && (
-                    <div>{findStats(currentCpuPokemon, status)}</div>
-                  )}
+                {matchResults && <div>{findStats(currentPokemon, status)}</div>}
+              </div>
+              <div className="w-[45%]">
+                <div
+                  className={
+                    compareStats(matchStats.cpu, matchStats.player).color
+                  }
+                >
+                  {compareStats(matchStats.cpu, matchStats.player).text}
                 </div>
+                {matchResults && (
+                  <div>{findStats(currentCpuPokemon, status)}</div>
+                )}
               </div>
             </div>
           </div>
-        </>
+        </div>
       )}
-      <div className="grid grid-cols-2 gap-1 p-1">
-        <div className="flex flex-col items-center justify-center col-span-1 py-2 px-3 rounded-xl bg-white dark:bg-neutral-800">
+      <div
+        className="w-full grid grid-cols-4 gap-1 p-1
+          md:p-4 md:gap-2
+         md:w-[95%]
+        "
+      >
+        <div
+          className="flex flex-col items-center justify-center col-span-2 py-2 px-3 rounded-xl bg-white dark:bg-neutral-800
+            md:flex-row md:gap-1
+          "
+        >
           <div>What will</div>
           <div>{formatPokemonName(currentPokemon.name)} do?</div>
         </div>
-        <div className="flex flex-wrap justify-center col-span-1 gap-1 font-semibold">
-          <div className="w-full flex gap-1">
+        <div
+          className="flex flex-wrap justify-center col-span-2
+            gap-1 font-semibold
+          "
+        >
+          <div
+            className="w-full flex gap-1
+              md:gap-2
+            "
+          >
             <button
               className="w-1/2 py-2 rounded-xl text-white bg-[#DD5952] disabled:bg-opacity-50"
               type="button"
@@ -238,7 +281,9 @@ function CardGame() {
             {showWarning && <GameWarning setShowWarning={setShowWarning} />}
           </div>
           <button
-            className="w-full py-2 rounded-xl bg-white dark:bg-neutral-800 disabled:bg-opacity-50"
+            className="w-full py-2 rounded-xl bg-white dark:bg-neutral-800 disabled:bg-opacity-50
+            md:hidden
+            "
             type="button"
             disabled={matchResults}
             onClick={() => setShowTeam(true)}
@@ -254,13 +299,49 @@ function CardGame() {
             />
           )}
         </div>
-        <div className="w-full flex flex-wrap justify-center items-center col-span-2 p-2 gap-2 rounded-xl bg-white dark:bg-neutral-800">
+        <div
+          className="w-full flex flex-wrap justify-center
+            items-center col-span-4 py-2 px-4 gap-2 rounded-xl
+            bg-white dark:bg-neutral-800
+            md:col-span-2 md:grid md:grid-cols-3 md:place-content-center md:gap-2
+          "
+        >
           {currentPokemon.stats.map(({ baseStat }, index) => (
-            <div key={pokemonStatsName[index]}>
-              <b>{pokemonStatsName[index]}: </b>
+            <div
+              key={pokemonStatsName[index]}
+              className="w-[45%] text-sm
+                md:w-full
+              "
+            >
+              <b className="uppercase">{pokemonStatsName[index]}: </b>
               {baseStat.toString().padStart(3, '0')}
             </div>
           ))}
+        </div>
+        <div
+          className="hidden
+            md:h-[150px] md:flex md:justify-center md:items-center md:col-span-2
+            md:object-scale-down
+          "
+        >
+          <img
+            src={`https://projectpokemon.org/images/normal-sprite/${formatGifName(
+              currentPokemon.name
+            )}.gif`}
+            alt="Current Pokemon Gif"
+          />
+        </div>
+        <div
+          className="hidden
+            md:flex md:col-span-4
+          "
+        >
+          <PokemonGameTeam
+            setShowTeam={setShowTeam}
+            currentTeam={currentTeam}
+            currentPokemon={currentPokemon}
+            setCurrentPokemon={setCurrentPokemon}
+          />
         </div>
       </div>
     </div>

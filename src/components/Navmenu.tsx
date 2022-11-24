@@ -31,7 +31,7 @@ function Navmenu() {
       <div className="w-full max-w-7xl mx-auto ">
         <nav className="w-full bg-white dark:bg-neutral-900 flex border-b-2 mx-auto">
           <div className="w-full flex items-center justify-between">
-            <button type="button" className="px-8">
+            <button type="button" className="px-8 sm:px-5">
               <Link to="/">
                 <img
                   className="h-16 py-1"
@@ -49,11 +49,14 @@ function Navmenu() {
             sm:flex-row sm:pt-0
             `}
             >
-              <div className="sm:w-full sm:flex sm:justify-center sm:gap-7">
+              <div className="sm:w-full sm:flex sm:justify-center sm:gap-4">
                 {links.map((link) => (
                   <Link
-                    className="w-full flex items-center gap-4 border-b-2 uppercase p-3
-                sm:w-fit sm:border-none sm:p-0 sm:gap-0 sm:font-semibold"
+                    className="w-full flex items-center gap-4
+                      border-b-2 uppercase p-3
+                      sm:w-fit sm:border-none sm:p-0 sm:gap-0
+                      sm:font-semibold sm:text-sm
+                    "
                     key={link.name}
                     to={link.url}
                     onClick={() => setOpenMenu(false)}

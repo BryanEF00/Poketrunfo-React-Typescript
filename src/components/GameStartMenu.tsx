@@ -14,7 +14,12 @@ function GameStartMenu() {
             If you&apos;re ready, click on the start button!
           </div>
           <button
-            className="w-1/2 bg-green-600 text-white font-semibold py-2 rounded-lg"
+            className="w-1/2 bg-green-600 text-white
+              font-semibold py-2 rounded-lg
+              sm:w-1/3
+              md:w-1/4
+              lg:w-1/5
+            "
             type="button"
             onClick={() => setStart(true)}
           >
