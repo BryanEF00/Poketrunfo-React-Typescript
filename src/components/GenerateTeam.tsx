@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import AppContext from '../context/AppContext';
 import randomPokemon from '../helpers/collection/randomPokemon';
 import randomTeam from '../helpers/collection/randomTeam';
-import { IPokemon } from '../interfaces/IPokemon';
 import { saveCollection } from '../services/localStorage/collection';
 
 function GenerateTeam() {
@@ -11,11 +10,14 @@ function GenerateTeam() {
 
   const handleGeneratePokemon = () => {
     const random = randomPokemon(pokemons);
+    const isDuplicate = selectedPokemons.find(({ id }) => id === random?.id);
 
-    if (random) {
+    if (random && !isDuplicate) {
       const selectedArray = [...selectedPokemons, random];
       setState({ ...state, selectedPokemons: selectedArray });
       saveCollection(selectedArray);
+    } else {
+      handleGeneratePokemon();
     }
   };
 
