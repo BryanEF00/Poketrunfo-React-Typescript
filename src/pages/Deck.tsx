@@ -38,15 +38,16 @@ function Deck() {
         <div className="w-full border-t-2 py-2">
           <div
             className="flex flex-wrap items-center justify-evenly
-        sm:justify-center sm:gap-4
-        "
+              sm:justify-center sm:gap-4
+            "
           >
             {filteredPokemons.map((pokemon) => (
               <div
                 className="w-[45%] flex flex-col items-center
-              sm:w-[27.5%]
-              lg:w-[20%]
-              "
+                  sm:w-[27.5%]
+                  lg:w-[19.5%]
+                  xl:w-[15%]
+                "
                 key={pokemon.id}
               >
                 <PokemonSimpleCard pokemon={pokemon} />

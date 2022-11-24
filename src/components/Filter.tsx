@@ -53,7 +53,14 @@ function Filter() {
   };
 
   return (
-    <div className="flex flex-col gap-4 text-lg p-5 sm:w-11/12 sm:mx-auto">
+    <div
+      className="flex flex-col gap-4 text-lg p-5
+        sm:w-[95%] sm:mx-auto
+        md:w-[90%]
+        lg:w-[85%]
+        xl:w-full
+      "
+    >
       <div className="flex justify-between items-center">
         <h1 className="w-1/2 font-bold uppercase ">Filter :</h1>
         <div className="w-1/2 flex gap-5 items-center justify-end">
