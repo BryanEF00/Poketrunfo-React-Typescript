@@ -29,6 +29,7 @@ function TurnIndicator({ turn = 6 }: IProps) {
               className="bg-black flex justify-center
                 items-center w-full h-[1.5vw]
                 md:h-[0.8vw]
+                xl:h-[0.6vw]
                 2xl:h-[0.5vw]
                 3xl:h-[0.4vw]
               "

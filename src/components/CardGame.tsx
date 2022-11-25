@@ -146,17 +146,20 @@ function CardGame() {
       </div>
       {endGame ? (
         <div
-          className="h-[40vh] w-full flex flex-col justify-between text-xl bg-white 
-        dark:bg-neutral-800 rounded-lg p-5"
+          className="min-h-[30vw] w-full flex flex-col
+            justify-between text-xl gap-5 rounded-lg
+            lg:min-h-[25vw]
+            xl:min-h-[20vw]
+          "
         >
-          <div>Game Result:</div>
+          <div className="font-bold">Game Result:</div>
           <div
             className={`${compareScore(matchScore.player, matchScore.cpu).color}
-            text-5xl font-bold`}
+            text-4xl font-bold`}
           >
             {compareScore(matchScore.player, matchScore.cpu).text}
           </div>
-          <div className="text-black dark:text-white">
+          <div className="flex  justify-center gap-1 text-black dark:text-white text-lg">
             <div>Thank you for playing</div>
             <div>my game!</div>
           </div>
@@ -303,7 +306,7 @@ function CardGame() {
           className="w-full flex flex-wrap justify-center
             items-center col-span-4 py-2 px-4 gap-2 rounded-xl
             bg-white dark:bg-neutral-800
-            md:col-span-2 md:grid md:grid-cols-3 md:place-content-center md:gap-2
+            md:col-span-2 md:grid md:grid-cols-3 md:place-content-center md:gap-2 md:px-2
           "
         >
           {currentPokemon.stats.map(({ baseStat }, index) => (
