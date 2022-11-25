@@ -24,7 +24,7 @@ function Deck() {
 
   const handleDisabledButton = (pokemon: IPokemon) => {
     if (selectedPokemons?.length === 6) return true;
-    return selectedPokemons.some(({ name }) => name === pokemon.name);
+    return selectedPokemons?.some(({ name }) => name === pokemon.name);
   };
 
   return (
