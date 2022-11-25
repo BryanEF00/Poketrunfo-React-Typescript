@@ -10,7 +10,7 @@ function GenerateTeam() {
 
   const handleGeneratePokemon = () => {
     const random = randomPokemon(pokemons);
-    const isDuplicate = selectedPokemons.find(({ id }) => id === random?.id);
+    const isDuplicate = selectedPokemons?.find(({ id }) => id === random?.id);
 
     if (random && !isDuplicate) {
       const selectedArray = [...selectedPokemons, random];
@@ -38,42 +38,44 @@ function GenerateTeam() {
         <h1 className="w-1/2 font-bold uppercase ">Collection :</h1>
       </div>
       <h3 className="text-center">Add a random Pokémon or Team.</h3>
-      <div className="w-full flex flex-wrap justify-center gap-3">
-        <button
-          type="button"
-          className="w-[45%] bg-green-500 text-white font-semibold py-1 rounded-lg disabled:opacity-50
+      {selectedPokemons && (
+        <div className="w-full flex flex-wrap justify-center gap-3">
+          <button
+            type="button"
+            className="w-[45%] bg-green-500 text-white font-semibold py-1 rounded-lg disabled:opacity-50
           md:w-[35%]
           lg:w-[20%]
           xl:w-[15%]"
-          disabled={selectedPokemons?.length === 6}
-          onClick={handleGeneratePokemon}
-        >
-          + Pokémon
-        </button>
-        <button
-          type="button"
-          className="w-[45%] bg-[#9E69E3] text-white font-semibold py-1 rounded-lg disabled:opacity-50
+            disabled={selectedPokemons?.length === 6}
+            onClick={handleGeneratePokemon}
+          >
+            + Pokémon
+          </button>
+          <button
+            type="button"
+            className="w-[45%] bg-[#9E69E3] text-white font-semibold py-1 rounded-lg disabled:opacity-50
           md:w-[35%]
           lg:w-[20%]
           xl:w-[15%]"
-          disabled={selectedPokemons?.length !== 0}
-          onClick={handleGenerateTeam}
-        >
-          + Team
-        </button>
-        <button
-          type="button"
-          className="w-[45%] border-2 py-1 font-semibold border-red-600 rounded-lg text-red-600 bg-zinc-100 
+            disabled={selectedPokemons?.length > 0}
+            onClick={handleGenerateTeam}
+          >
+            + Team
+          </button>
+          <button
+            type="button"
+            className="w-[45%] border-2 py-1 font-semibold border-red-600 rounded-lg text-red-600 bg-zinc-100 
           dark:bg-neutral-900 disabled:opacity-50
           md:w-[35%]
           lg:w-[20%]
           xl:w-[15%]"
-          onClick={handleRemoveAll}
-          disabled={selectedPokemons?.length === 0}
-        >
-          Remove All
-        </button>
-      </div>
+            onClick={handleRemoveAll}
+            disabled={selectedPokemons?.length === 0}
+          >
+            Remove All
+          </button>
+        </div>
+      )}
     </div>
   );
 }
