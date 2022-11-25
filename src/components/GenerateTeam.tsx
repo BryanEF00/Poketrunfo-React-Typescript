@@ -45,7 +45,7 @@ function GenerateTeam() {
           md:w-[35%]
           lg:w-[20%]
           xl:w-[15%]"
-          disabled={selectedPokemons.length === 6}
+          disabled={selectedPokemons?.length === 6}
           onClick={handleGeneratePokemon}
         >
           + Pokémon
@@ -56,7 +56,7 @@ function GenerateTeam() {
           md:w-[35%]
           lg:w-[20%]
           xl:w-[15%]"
-          disabled={selectedPokemons.length !== 0}
+          disabled={selectedPokemons?.length !== 0}
           onClick={handleGenerateTeam}
         >
           + Team
@@ -69,7 +69,7 @@ function GenerateTeam() {
           lg:w-[20%]
           xl:w-[15%]"
           onClick={handleRemoveAll}
-          disabled={selectedPokemons.length === 0}
+          disabled={selectedPokemons?.length === 0}
         >
           Remove All
         </button>
