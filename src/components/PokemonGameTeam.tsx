@@ -32,7 +32,7 @@ function PokemonGameTeam({
         md:hidden
       "
       >
-        <div className="">Your Team</div>
+        <div>Your Team</div>
         <button type="button" onClick={() => setShowTeam(false)}>
           <FaTimes size={30} color="red" />
         </button>

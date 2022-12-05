@@ -40,7 +40,7 @@ function GenerateTeam() {
   };
 
   return (
-    <div className="flex flex-col gap-4 text-lg p-5 sm:w-11/12 sm:mx-auto">
+    <div className="flex flex-col gap-4 text-lg p-5">
       <div className="flex justify-between items-center">
         <h1 className="w-1/2 font-bold uppercase ">Collection :</h1>
       </div>

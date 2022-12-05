@@ -19,7 +19,7 @@ function Home() {
             Welcome to Pokétrunfo!
           </h1>
           <p className="lg:text-lg text-center py-2">
-            This is a Trump Card Game.
+            This is a Top Trumps-like Card Game.
           </p>
           <div
             className="w-full overflow-x-scroll flex justify-start gap-1
@@ -35,16 +35,25 @@ function Home() {
           </div>
           <h3 className="text-center text-lg py-4">
             You can build your team, choosing between the Pokémon&apos;s first
-            generation
+            generation.
           </h3>
         </div>
         <div
-          className="w-11/12 flex justify-center
-        sm:w-7/12
-        lg:w-1/4
-        "
+          className="w-full flex justify-center
+            lg:w-1/3
+            xl:w-1/4
+          "
         >
-          <PokemonDetailedCard pokemon={pokemonMock} />
+          <div
+            className="w-11/12 flex justify-center
+            sm:w-7/12
+            md:w-1/2
+            lg:w-11/12
+            xl:w-full
+            "
+          >
+            <PokemonDetailedCard pokemon={pokemonMock} />
+          </div>
         </div>
       </section>
     </div>

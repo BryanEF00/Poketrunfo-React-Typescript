@@ -41,19 +41,20 @@ function PokemonDetailedCard({ pokemon }: IProps) {
       </p>
       <p
         className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[28%] right-[2%]
-        sm:min-w-[15vmin] sm:right-[2%]
-        md:min-w-[12vmin] md:text-[2vmin] md:right-[0%]
-        lg:min-w-[5vmin] lg:text-[1.3vmin] lg:right-[7%]"
+          sm:min-w-[25%] sm:text-[80%] sm:right-0
+          md:min-w-[25%] md:text-[80%] md:right-0
+          lg:min-w-[25%] lg:text-[70%] lg:right-0
+        "
       >
         {pokemon.types[0]}
       </p>
       {pokemon.types.length > 1 && (
         <p
           className="min-w-[18vmin] w-fit absolute text-black text-center font-semibold text-[3.5vmin] uppercase top-[40.35%] right-[2%]
-        sm:min-w-[15vmin] sm:right-[2%]
-        md:min-w-[12vmin] md:text-[2vmin] md:right-[0%]
-        lg:min-w-[5vmin] lg:text-[1.3vmin] lg:right-[7%]
-        "
+            sm:min-w-[25%] sm:text-[80%] sm:right-0
+            md:min-w-[25%] md:text-[80%] md:right-0
+            lg:min-w-[25%] lg:text-[70%] lg:right-0
+          "
         >
           {pokemon.types[1]}
         </p>
@@ -259,7 +260,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
                       width="195"
                       height="10.9048"
                       rx="5.45239"
-                      className={`${setBarColor()} stroke-white`}
+                      className={`${setBarColor()} stroke-white stroke-2`}
                       style={{ width: setStatsBar[0] }}
                     />
                   </g>
@@ -270,7 +271,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
                       width="195"
                       height="10.9048"
                       rx="5.45239"
-                      className={`${setBarColor()} stroke-white`}
+                      className={`${setBarColor()} stroke-white stroke-2`}
                       style={{ width: setStatsBar[1] }}
                     />
                   </g>
@@ -281,7 +282,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
                       width="195"
                       height="10.9048"
                       rx="5.45239"
-                      className={`${setBarColor()} stroke-white`}
+                      className={`${setBarColor()} stroke-white stroke-2`}
                       style={{ width: setStatsBar[2] }}
                     />
                   </g>
@@ -292,7 +293,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
                       width="195"
                       height="10.9048"
                       rx="5.45239"
-                      className={`${setBarColor()} stroke-white`}
+                      className={`${setBarColor()} stroke-white stroke-2`}
                       style={{ width: setStatsBar[3] }}
                     />
                   </g>
@@ -303,7 +304,7 @@ function PokemonDetailedCard({ pokemon }: IProps) {
                       width="195"
                       height="10.9048"
                       rx="5.45239"
-                      className={`${setBarColor()} stroke-white`}
+                      className={`${setBarColor()} stroke-white stroke-2`}
                       style={{ width: setStatsBar[4] }}
                     />
                   </g>
