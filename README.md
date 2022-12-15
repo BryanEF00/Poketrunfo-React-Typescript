@@ -129,10 +129,10 @@ To run this project, you'll need to install [Node.js](https://nodejs.org/en/) fi
 # Mobile Version
 
 <div align="center">
-  <img src="images/HomePageMobile.png" alt="Home Page Mobile" width=50%>
-  <img src="images/DeckMobile.png" alt="Deck Page Mobile" width=50%>
-  <img src="images/CollectionMobile.png" alt="Collection Page" width=50%>
-  <img src="images/GameMobile.png" alt="Game Page Mobile" width=50%>
+  <img src="images/HomePageMobile.png" alt="Home Page Mobile" width=200>
+  <img src="images/DeckMobile.png" alt="Deck Page Mobile" width=200>
+  <img src="images/CollectionMobile.png" alt="Collection Page" width=200>
+  <img src="images/GameMobile.png" alt="Game Page Mobile" width=200>
 </div>
 
 <!-- MARKDOWN LINKS & IMAGES -->
