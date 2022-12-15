@@ -1,5 +1,7 @@
+<h1 align="center">Welcome to PokéTrunfo</h1>
+
 <div align="center">
-  <img style="background-color: white; padding: 12px; border-radius: 25%; " src="images/logo.svg" alt="Logo" width="100" height="100">
+  <img src="images/logo.svg" alt="Logo" width="200" height="200">
   <p align="center">
     Top Trumps-like Card Game of Pokémon's first generation.
     <br />
@@ -9,7 +11,6 @@
 # About The Project
 
 The initial concept of this project was developed during the Frontend module of Trybe's Web Development Course.
-
 The idea was to develop an React Application based on the [Top Trumps](https://en.wikipedia.org/wiki/Top_Trumps) Card Game.
 
 The user was able to:
@@ -32,8 +33,14 @@ I removed the card creation feature, and added 151 Pokémon Cards using the data
 A huge thanks to my friend [Raphael Quintela](https://www.linkedin.com/in/raphael-quintela-51a88a24b/). He helped me with the design of the pages, and created amazing SVGs for the icons and the layout of the cards.
 
 <div align="center">
-  <img src="images/HomePageLight.png" alt="Home Page Light Mode" width=50% height=50%>
-  <img src="images/HomePageDark.png" alt="Home Page Dark Mode" width=50% height=50%>
+
+### Light Mode 
+
+  <img src="images/HomePageLight.png" alt="Home Page Light Mode">
+  
+### Dark Mode 
+  
+  <img src="images/HomePageDark.png" alt="Home Page Dark Mode">
 </div>
 
 ## Deck
@@ -41,9 +48,9 @@ A huge thanks to my friend [Raphael Quintela](https://www.linkedin.com/in/raphae
 <details>
   <summary>Show Screenshots</summary><br />
   <div align="center">
-    <img src="images/Deck.png" alt="Deck Page" width=50% height=50%>
-    <img src="images/ClickOnCard.png" alt="Card Example 1" width=50% height=50%>
-    <img src="images/ClickOnCard2.png" alt="Card Example 2" width=50% height=50%>
+    <img src="images/Deck.png" alt="Deck Page">
+    <img src="images/ClickOnCard.png" alt="Card Example 1">
+    <img src="images/ClickOnCard2.png" alt="Card Example 2">
   </div>
 </details>
 
@@ -52,8 +59,8 @@ A huge thanks to my friend [Raphael Quintela](https://www.linkedin.com/in/raphae
 <details>
   <summary>Show Screenshots</summary><br />
   <div align="center">
-    <img src="images/EmptyCollection.png" alt="Empty Collection Page" width=50% height=50%>
-    <img src="images/FullCollection.png" alt="Full Collection Page" width=50% height=50%>
+    <img src="images/EmptyCollection.png" alt="Empty Collection Page">
+    <img src="images/FullCollection.png" alt="Full Collection Page">
   </div>
 </details>
 
@@ -62,11 +69,11 @@ A huge thanks to my friend [Raphael Quintela](https://www.linkedin.com/in/raphae
 <details>
   <summary>Show Screenshots</summary><br />
   <div align="center">
-    <img src="images/GamePage1.png" alt="Game Page 1" width=50% height=50%>
-    <img src="images/GamePage2.png" alt="Game Page 2" width=50% height=50%>
-    <img src="images/GamePage3.png" alt="Game Page 3" width=50% height=50%>
-    <img src="images/GamePage4.png" alt="Game Page 4" width=50% height=50%>
-    <img src="images/GamePage5.png" alt="Game Page 5" width=50% height=50%>
+    <img src="images/GamePage1.png" alt="Game Page 1">
+    <img src="images/GamePage2.png" alt="Game Page 2">
+    <img src="images/GamePage3.png" alt="Game Page 3">
+    <img src="images/GamePage4.png" alt="Game Page 4">
+    <img src="images/GamePage5.png" alt="Game Page 5">
     
   </div>
 </details>
@@ -87,7 +94,7 @@ To run this project, you'll need to install [Node.js](https://nodejs.org/en/) fi
 ## Installation
 
 1. Clone the repository.
-  * `git clone git@github.com:tryber/sd-019-a-project-tryunfo.git`
+  * `git clone git@github.com:BryanEF00/Poketrunfo-ts.git`
   * Open the repository folder you just cloned:
     * `cd Poketrunfo-ts`
 
@@ -106,7 +113,7 @@ To run this project, you'll need to install [Node.js](https://nodejs.org/en/) fi
   If you want to choose the cards on your own, navigate to the `Deck Page` and search for the cards. <br/>
   Optionally, you can go directly to the `Collection Page`, and select random cards to your deck or just select a fully random team.
 
-## How to Play:
+## How to Play
 
   If you already have 6 Pokémons in your collection, you can just navigate to the `Game Page` and hit the start button.
 
