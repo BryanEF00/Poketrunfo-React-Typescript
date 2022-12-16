@@ -121,8 +121,8 @@ To run this project, you'll need to install [Node.js](https://nodejs.org/en/) fi
   * On the first turn you'll select an attribute that fit your best Pokemon.
   * Once selected, hit the fight button.
   * Based on your selected attribute, the CPU will pick a card with the highest status possible from it's deck and compare it against yours.
-  * The highest status win and both selected cards are discarded.
-  * On the next turn, the CPU will lock an attribute of it's best card, and now you'll have to select a card besed on the CPU choise.
+  * The highest status wins and both selected cards are discarded.
+  * On the next turn, the CPU will lock an attribute of it's best card, and now you'll have to select a card based on the CPU choise.
 
   After 6 turns, the one with the most victories will be the winner.
 
