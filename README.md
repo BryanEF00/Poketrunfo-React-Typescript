@@ -118,11 +118,11 @@ To run this project, you'll need to install [Node.js](https://nodejs.org/en/) fi
   If you already have 6 Pokémons in your collection, you can just navigate to the `Game Page` and hit the start button.
 
   * The game has 6 turns in total, and they switch between Player and CPU at the end of each turn.
-  * On the first turn you'll select an attribute that fit your best Pokemon.
+  * On the first turn you'll select an attribute that fits your Pokemon best.
   * Once selected, hit the fight button.
-  * Based on your selected attribute, the CPU will pick a card with the highest status possible from it's deck and compare it against yours.
-  * The highest status wins and both selected cards are discarded.
-  * On the next turn, the CPU will lock an attribute of it's best card, and now you'll have to select a card based on the CPU choise.
+  * Based on your selected attribute, the CPU will pick a card with the highest status from it's deck and compare it to yours.
+  * The highest status will win and both selected cards are discarded.
+  * On the next turn, the CPU will lock an attribute of it's best card, and now you'll have to select a card based on the CPU's choice.
 
   After 6 turns, the one with the most victories will be the winner.
 
